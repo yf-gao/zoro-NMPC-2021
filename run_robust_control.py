@@ -100,7 +100,7 @@ def run_robust_control(chain_params):
     P0_vec = sym_mat2vec(P0_mat)
 
     # set dimensions
-    ocp.dims.N = N
+    ocp.solver_options.N_horizon = N
 
     # set cost module
     ocp.cost.cost_type = 'LINEAR_LS'
