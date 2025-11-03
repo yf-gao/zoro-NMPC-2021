@@ -19,8 +19,7 @@ for n_mass in range(3, 7):
         run_fastzoro_robust_control(chain_params, zoro_riccati=-1)
         run_fastzoro_robust_control(chain_params, zoro_riccati=0)
         run_fastzoro_robust_control(chain_params, zoro_riccati=1)
-        run_fastzoro_robust_control(chain_params, zoro_riccati=2)
-        # run_robust_control(chain_params)
+        run_robust_control(chain_params)
         # run_tailored_robust_control(chain_params)
 
 
