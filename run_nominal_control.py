@@ -64,7 +64,7 @@ def run_nominal_control(chain_params):
     x0 = xrest
 
     # set dimensions
-    ocp.dims.N = N
+    ocp.solver_options.N_horizon = N
 
     # set cost module
     ocp.cost.cost_type = 'LINEAR_LS'

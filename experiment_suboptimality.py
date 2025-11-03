@@ -73,7 +73,7 @@ def ZO_robust(chain_params):
     x0 = xrest
 
     # set dimensions
-    ocp.dims.N = N
+    ocp.solver_options.N_horizon = N
 
     # set cost module
     ocp.cost.cost_type = 'LINEAR_LS'
@@ -153,7 +153,6 @@ def ZO_robust(chain_params):
     ocp.solver_options.qp_tol = nlp_tol
     ocp.solver_options.nlp_solver_max_iter = nlp_iter
     # ocp.solver_options.qp_solver_iter_max = 500
-    # ocp.solver_options.initialize_t_slacks = 1
     # ocp.solver_options.qp_solver_max_iter = 100
 
     # set prediction horizon
@@ -352,7 +351,7 @@ def naive_robust(chain_params):
     P0_vec = sym_mat2vec(P0_mat)
 
     # set dimensions
-    ocp.dims.N = N
+    ocp.solver_options.N_horizon = N
 
     # set cost module
     ocp.cost.cost_type = 'LINEAR_LS'
